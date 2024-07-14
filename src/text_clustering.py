@@ -358,6 +358,10 @@ class ClusterClassifier:
             )
             t.set_bbox(dict(facecolor='white', alpha=0.9, linewidth=0, boxstyle='square,pad=0.1'))
         ax.set_axis_off()
+        
+        # Save the figure to a file
+        plt.savefig('cluster_plot.png', dpi=300, bbox_inches='tight')
+        plt.close(fig)
 
     def _show_plotly(self, df):
         fig = px.scatter(
